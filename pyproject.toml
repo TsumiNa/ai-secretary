@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "ai secretary"
+version = "0.1.0"
+description = "AI-assisted secretary services to help you organize your daily academic work."
+authors = ["TsumiNa <liu.chang.1865@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+slack-bolt = "^1.19.1"
+openai = "^1.35.15"
+trafilatura = "^1.11.0"
+langchain = "^0.2.9"
+
+[tool.ruff]
+exclude = [".venv", "venv", "__pycache__", ".git"]
+line-length = 88
+indent-width = 4
+src = ["xenonpy"]
+
+[tool.ruff.lint]
+# PEP8
+select = [
+    "F", # Pyflakes
+    "E", # pycodestyle
+    "W", # pycodestyle
+]
+ignore = [
+    "F841", # unused-variable
+    "E741", # ambiguous-variable-name
+    "W505", # doc-line-too-long
+]
+fixable = ["ALL"]
+
+[tool.ruff.format]
+quote-style = "double"
+skip-magic-trailing-comma = false
+
+[tool.ruff.lint.mccabe]
+# C901
+max-complexity = 8
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
