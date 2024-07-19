@@ -1,17 +1,21 @@
 [tool.poetry]
 name = "ai secretary"
 version = "0.1.0"
-description = "AI-assisted secretary services to help you organize your daily academic work."
+description = "AI-assisted secretary services to help you organize your daily academic work"
 authors = ["TsumiNa <liu.chang.1865@gmail.com>"]
 license = "MIT"
 readme = "README.md"
+repository = "https://github.com/TsumiNa/ai-secretary"
+packages = [{ include = "secretary" }]
+include = ["pyproject.toml", "README.md", "LICENSE"]
+
 
 [tool.poetry.dependencies]
 python = "^3.10"
 slack-bolt = "^1.19.1"
-openai = "^1.35.15"
+openai = "^1.36.0"
 trafilatura = "^1.11.0"
-langchain = "^0.2.9"
+python-dotenv = "^1.0.1"
 
 [tool.ruff]
 exclude = [".venv", "venv", "__pycache__", ".git"]

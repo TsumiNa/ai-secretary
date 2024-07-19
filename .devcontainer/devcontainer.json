@@ -18,7 +18,8 @@
                 "ms-python.vscode-pylance",
                 "streetsidesoftware.code-spell-checker",
                 "tamasfe.even-better-toml",
-                "charliermarsh.ruff"
+                "charliermarsh.ruff",
+                "pflannery.vscode-versionlens"
             ]
         }
     }
